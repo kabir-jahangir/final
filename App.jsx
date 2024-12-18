@@ -5,6 +5,9 @@ import './App.css'
 import Register from './Components/Register/Register'
 import Home from './Pages/Home'
 import LayoutOne from './Layouts/LayoutOne'
+import app from './firebase.config'
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
 // ===============import part end
 const  App = ()=> {
   // ===============Routing part  start
@@ -21,6 +24,7 @@ const  App = ()=> {
   return (
     <>  
          <RouterProvider router = {myRoute} />
+          <ToastContainer />
     </>
   )
 }
