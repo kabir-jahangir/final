@@ -43,12 +43,10 @@ const Register = () => {
             sendEmailVerification(auth.currentUser)
                 .then(() => {
                     setLoading(false)
-
-
-                    //==========set user name and profile pic
+                    //==========update
                     updateProfile(auth.currentUser,{
                         
-                        displayName: email, 
+                        email: email, 
                         
                       }).then(() => {
                         
